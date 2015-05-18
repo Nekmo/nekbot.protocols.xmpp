@@ -1,0 +1,7 @@
+NekBot-XMPP
+###########
+XMPP (Jabber) protocol support for Nekbot, a modular and multiprotocol bot written in Python.
+
+You need NekBot to use this plugin. This plugin does not work without NekBot.
+
+https://bitbucket.org/Nekmo/nekbot-mirai/
