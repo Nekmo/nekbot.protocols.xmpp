@@ -62,7 +62,7 @@ setup(
     packages=['nekbot', 'nekbot.protocols', 'nekbot.protocols.xmpp'],
     include_package_data=True,
 
-    keywords=['nekbot', 'bot', 'xmpp', 'chat', 'jabber],
+    keywords=['nekbot', 'bot', 'xmpp', 'chat', 'jabber'],
     
     dependency_links=[
     ],
