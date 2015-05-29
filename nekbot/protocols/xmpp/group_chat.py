@@ -10,16 +10,16 @@ logger = getLogger('nekbot.protocols.telegram.group_chat')
 
 
 class GroupChatXMPP(GroupChat):
-    def __init__(self, protocol, receiver, group_chat_id=None):
-        self.receiver = receiver
-        self.users = UsersXMPP(protocol)
-        GroupChat.__init__(self, protocol, receiver.title, receiver.id)
 
     def get_users(self, override=True):
-        self.protocol.sender.chat_info(self.receiver.cmd)
+        pass
 
     def send_message(self, body, notice=False):
-        self.protocol.sender.send_msg(self.receiver.cmd, self.protocol.prepare_message(body))
+        msubject = None
+        mtype = 'groupchat'
+        body = self.protocol.prepare_message(body)
+        self.protocol.sleek_send_message(self.id, body, msubject, mtype)
+
 
 class GroupChatsXMPP(GroupChats):
     pass
