@@ -29,6 +29,8 @@ class XMPPMessage(Message):
 
     @property
     def is_own(self):
+        if self.is_public:
+            return self.groupchat.own_nick == self.msg['mucnick']
         return self.msg['from'].full == self.msg['to'].full
 
     @property

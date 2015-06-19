@@ -14,6 +14,10 @@ class GroupChatXMPP(GroupChat):
     def get_users(self, override=True):
         pass
 
+    @property
+    def own_nick(self):
+        return self.protocol.plugin['xep_0045'].ourNicks[self.id]
+
     def send_message(self, body, notice=False):
         msubject = None
         mtype = 'groupchat'
